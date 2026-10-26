@@ -3,7 +3,7 @@ import React from 'react';
 export default function VideoCard({ title, channel, views, time, thumbnail, avatar }) {
   return (
     <div className="flex flex-col gap-2 cursor-pointer group">
-      <div className="w-full aspect-video bg-gray-200 rounded-xl overflow-hidden">
+      <div className="w-full aspect-video bg-gray-200 rounded-xl overflow-hidden flex-shrink-0">
         <img 
           src={thumbnail} 
           alt={title} 
@@ -18,7 +18,7 @@ export default function VideoCard({ title, channel, views, time, thumbnail, avat
             className="w-full h-full object-cover"
           />
         </div>
-        <div className="flex flex-col">
+        <div className="flex flex-col flex-1 overflow-hidden">
           <h3 className="font-semibold text-gray-900 text-sm line-clamp-2 leading-tight">
             {title}
           </h3>
